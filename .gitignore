@@ -1,0 +1,7 @@
+.vscode/
+node_modules/
+
+.firebaserc
+firebase.json
+public/js/portfolio.js
+public/css/style.css
