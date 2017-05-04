@@ -53,10 +53,6 @@
         ]
       }
     ],
-    "react/prefer-stateless-function": "off",
-    "eol-last": [
-      "error",
-      "never"
-    ]
+    "react/prefer-stateless-function": "off"
   }
 }

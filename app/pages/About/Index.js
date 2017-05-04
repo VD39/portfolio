@@ -13,7 +13,7 @@ import Connect from '../../components/about/Connect';
 import Interests from '../../components/about/Interests';
 
 /* Stylesheet */
-import './about.scss';
+import './About.scss';
 
 class About extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class About extends React.Component {
       aboutMe = (
         <div className="about-wrapper">
 
-          <h1>{'{ About }'}</h1>
+          <h1 className="title">{'{ About }'}</h1>
 
           <div className="about row">
 

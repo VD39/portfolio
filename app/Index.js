@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './styles/style.scss';
 
 /* My components */
-import Root from './routes/Index';
+import Root from './routes';
 
 const dom = document.getElementById('root');
 

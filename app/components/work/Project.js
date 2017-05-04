@@ -12,7 +12,7 @@ import Items from '../items/Items';
  */
 function viewCode(url, title) {
   if (url) {
-    return <p><a className="function" href={url} target="_blank" rel="noopener noreferrer" title={title}>View code</a></p>;
+    return <p><a className="function" href={url} target="_blank" rel="noopener noreferrer" title={`View ${title} code.`}>View code</a></p>;
   }
 }
 
@@ -26,30 +26,34 @@ class Project extends React.Component {
 
             <div key={index} className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-              <div className="body">
+              <div className="body-wrapper">
 
                 <h3 className="h4">
-                  <a className="function bold" href={object.visitSiteUrl} target="_blank" rel="noopener noreferrer" title={object.name}>
+                  <a className="function bold" href={object.visitSiteUrl} target="_blank" rel="noopener noreferrer" title={`View ${object.name} site.`}>
                     {object.name}
                   </a>
                 </h3>
 
-                <p>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: object.description
-                    }}
-                  />
-                </p>
+                <div className="body">
 
-                <p className="list">Technologies Used: [
-                  <Items arr={object.technologiesUsed} start="" end="" />
-                  ]
-                </p>
+                  <p>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: object.description
+                      }}
+                    />
+                  </p>
 
-                {
-                  viewCode(object.codeURL, object.name)
-                }
+                  <p className="list">Technologies Used: [
+                    <Items arr={object.technologiesUsed} start="" end="" />
+                    ]
+                  </p>
+
+                  {
+                    viewCode(object.codeURL, object.name)
+                  }
+
+                </div>
 
               </div>
 
