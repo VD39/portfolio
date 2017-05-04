@@ -9,7 +9,7 @@ import Loader from '../../components/loader/Loader';
 import Projects from '../../components/work/Projects';
 
 /* Stylesheet */
-import './work.scss';
+import './Work.scss';
 
 class Work extends React.Component {
   constructor(props) {
@@ -37,9 +37,9 @@ class Work extends React.Component {
 
     if (this.state.loading === false) {
       portfolioData = (
-        <div>
+        <div className="wrapper">
 
-          <h1>{'{ Work }'}</h1>
+          <h1 className="title">{'{ Work }'}</h1>
 
           <Projects portfolio={portfolio} />
 

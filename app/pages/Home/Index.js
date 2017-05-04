@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Iam from '../../components/home/Iam';
 
 /* Stylesheet */
-import './home.scss';
+import './Home.scss';
 
 class Home extends React.Component {
   render() {

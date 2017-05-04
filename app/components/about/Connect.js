@@ -20,7 +20,7 @@ class Connect extends React.Component {
               this.props.connections.map((object, index) => (
 
                 <li key={index}>
-                  {'<'}<a href={object.address} target="_blank" rel="noopener noreferrer" title={`View ${object.name}`}>
+                  {'<'}<a href={object.address} target="_blank" rel="noopener noreferrer" title={`View ${object.name}.`}>
                     {object.name}
                   </a>{' />'}
                 </li>

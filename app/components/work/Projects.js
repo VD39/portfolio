@@ -5,18 +5,28 @@ import PropTypes from 'prop-types';
 /* My components */
 import Project from './Project';
 
+/* Stylesheet */
+import './Projects.scss';
+
 class Projects extends React.Component {
   render() {
     return (
-      <div>
+      <div className="projects">
         {
           this.props.portfolio.map((object, index) => (
 
             <div key={index}>
+              <div className="code-wrapper">
 
-              <h2>{object.title}</h2>
+                <div className="code-header">
 
-              <hr className="hr" />
+                  <h3>&gt;&gt; {index + 1}_{object.title}</h3>
+
+                </div>
+
+              </div>
+
+              <p className="description">{object.description}</p>
 
               <Project work={object.work} />
 

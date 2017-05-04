@@ -3,9 +3,9 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 /* My components */
-import Home from '../pages/Home/Index';
-import About from '../pages/About/Index';
-import Work from '../pages/Work/Index';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Work from '../pages/Work';
 
 class Routes extends React.Component {
   render() {

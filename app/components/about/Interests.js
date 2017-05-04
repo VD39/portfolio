@@ -28,7 +28,7 @@ class Intrests extends React.Component {
 
             ))
           }
-          <p>interests@3.10.10 C:\Program Files\interests\display</p>
+          <p>$ exit</p>
 
         </div>
 
