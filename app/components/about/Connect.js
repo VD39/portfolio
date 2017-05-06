@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Connect component.
+ */
 class Connect extends React.Component {
   render() {
     return (
@@ -36,6 +39,9 @@ class Connect extends React.Component {
   }
 }
 
+/**
+ * Connect props.
+ */
 Connect.propTypes = {
   connections: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,

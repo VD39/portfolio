@@ -11,6 +11,9 @@ const config = {
 
 firebase.initializeApp(config);
 
+/**
+ * Firebase reference
+ */
 const fbRef = firebase.database().ref();
 
 export default fbRef;

@@ -6,8 +6,11 @@ import PropTypes from 'prop-types';
 import Project from './Project';
 
 /* Stylesheet */
-import './Projects.scss';
+import './projects.scss';
 
+/**
+ * Projects component.
+ */
 class Projects extends React.Component {
   render() {
     return (
@@ -39,6 +42,9 @@ class Projects extends React.Component {
   }
 }
 
+/**
+ * Projects props.
+ */
 Projects.propTypes = {
   portfolio: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,

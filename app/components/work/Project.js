@@ -7,8 +7,8 @@ import Items from '../items/Items';
 
 /**
  * returns view code link if there is a URL
- * @param {string} url
- * @param {string} title
+ * @param {string} url - Url of the link
+ * @param {string} title - Title for the link
  */
 function viewCode(url, title) {
   if (url) {
@@ -16,6 +16,9 @@ function viewCode(url, title) {
   }
 }
 
+/**
+ * Project component.
+ */
 class Project extends React.Component {
   render() {
     return (
@@ -65,6 +68,9 @@ class Project extends React.Component {
   }
 }
 
+/**
+ * Project props.
+ */
 Project.propTypes = {
   work: PropTypes.arrayOf(PropTypes.shape({
     visitSiteUrl: PropTypes.string.isRequired,

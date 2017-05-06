@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 /* My components */
 import Items from '../items/Items';
 
+/**
+ * WorkExperience component.
+ */
 class WorkExperience extends React.Component {
   render() {
     return (
@@ -49,6 +52,9 @@ class WorkExperience extends React.Component {
   }
 }
 
+/**
+ * WorkExperience props.
+ */
 WorkExperience.propTypes = {
   experences: PropTypes.arrayOf(PropTypes.shape({
     jobTitle: PropTypes.string.isRequired,

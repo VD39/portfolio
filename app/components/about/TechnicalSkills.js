@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 /* My components */
 import Items from '../items/Items';
 
+/**
+ * TechnicalSkills component.
+ */
 class TechnicalSkills extends React.Component {
   render() {
     return (
@@ -39,6 +42,9 @@ class TechnicalSkills extends React.Component {
   }
 }
 
+/**
+ * TechnicalSkills props.
+ */
 TechnicalSkills.propTypes = {
   skills: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,

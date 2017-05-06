@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * AboutMe component.
+ */
 class AboutMe extends React.Component {
   render() {
     return (
@@ -70,6 +73,9 @@ class AboutMe extends React.Component {
   }
 }
 
+/**
+ * AboutMe props.
+ */
 AboutMe.propTypes = {
   me: PropTypes.shape({
     name: PropTypes.string.isRequired,

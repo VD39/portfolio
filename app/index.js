@@ -11,6 +11,9 @@ import Root from './routes';
 
 const dom = document.getElementById('root');
 
+/**
+ * Render ReactDOM.
+ */
 ReactDOM.render(
   <Root />,
   dom

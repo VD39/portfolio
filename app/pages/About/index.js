@@ -13,8 +13,11 @@ import Connect from '../../components/about/Connect';
 import Interests from '../../components/about/Interests';
 
 /* Stylesheet */
-import './About.scss';
+import './about.scss';
 
+/**
+ * About component.
+ */
 class About extends React.Component {
   constructor(props) {
     super(props);
