@@ -2,8 +2,11 @@
 import React from 'react';
 
 /* Stylesheet */
-import './Loader.scss';
+import './loader.scss';
 
+/**
+ * Loader component.
+ */
 class Loader extends React.Component {
   render() {
     return (

@@ -1,6 +1,9 @@
 /* React */
 import React from 'react';
 
+/**
+ * Iam component.
+ */
 class Iam extends React.Component {
   componentDidMount() {
     const items = ['\'Skilled\'', '\'Capable\'', '\'Experienced\''];

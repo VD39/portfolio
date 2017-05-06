@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 
+/**
+ * Layout component.
+ */
 class Layout extends React.Component {
   render() {
     return (
@@ -20,6 +23,9 @@ class Layout extends React.Component {
   }
 }
 
+/**
+ * Layout props.
+ */
 Layout.propTypes = {
   children: PropTypes.node,
 };

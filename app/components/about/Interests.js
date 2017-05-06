@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Intrests component.
+ */
 class Intrests extends React.Component {
   render() {
     return (
@@ -37,6 +40,9 @@ class Intrests extends React.Component {
   }
 }
 
+/**
+ * Intrests props.
+ */
 Intrests.propTypes = {
   interests: PropTypes.arrayOf(PropTypes.string).isRequired
 };

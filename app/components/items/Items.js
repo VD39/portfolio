@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Items component.
+ */
 class Items extends React.Component {
   render() {
     return (
@@ -22,6 +25,9 @@ class Items extends React.Component {
   }
 }
 
+/**
+ * Items props.
+ */
 Items.propTypes = {
   arr: PropTypes.arrayOf(PropTypes.string).isRequired,
   start: PropTypes.string.isRequired,

@@ -7,6 +7,9 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Work from '../pages/Work';
 
+/**
+ * Routes component.
+ */
 class Routes extends React.Component {
   render() {
     return (

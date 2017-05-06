@@ -9,8 +9,11 @@ import Loader from '../../components/loader/Loader';
 import Projects from '../../components/work/Projects';
 
 /* Stylesheet */
-import './Work.scss';
+import './work.scss';
 
+/**
+ * Work component.
+ */
 class Work extends React.Component {
   constructor(props) {
     super(props);
