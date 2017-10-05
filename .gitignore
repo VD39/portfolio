@@ -1,6 +1,10 @@
-.vscode/
-node_modules/
-
+node_modules
+.DS_Store
+.tmp
+.sass-cache
+npm-debug.log
+src/config/Firebase.js
+public/assets
 .firebaserc
 firebase.json
-public/assets/*
+
