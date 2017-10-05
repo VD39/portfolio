@@ -15,7 +15,7 @@ function HomePage() {
       <h1>Hello, I&#39;m <NavLink to="/about">Vijay</NavLink>.</h1>
       <p>I am a full stack web developer.</p>
       <p className="red">
-        I &#10084; coding and hacking things:
+        I &#10084; coding and hacking things with:
         <span className="js"> JavaScript</span>,
         <span className="ts"> TypeScript</span>,
         <span className="html"> HTML5</span>,
