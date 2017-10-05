@@ -1,0 +1,37 @@
+.home {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.js {
+  color: #efda50;
+}
+
+.ts {
+  color: #007ACC;
+}
+
+.html {
+  color: #e34f26;
+}
+
+.css {
+  color: #4271CF;
+}
+
+.node {
+  color: #6cc24a;
+}
+
+@media (max-width: 768px) {
+  .home {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 30px 0;
+  }
+}

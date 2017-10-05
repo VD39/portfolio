@@ -1,20 +1,39 @@
+// Initialisation
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+// Constants
+const ENTRY = path.join(__dirname, '/src');
+const OUTPUT = path.join(__dirname, '/public');
+const HOST = 'localhost';
+const PORT = 9000;
+const PROXY = `http://${HOST}:${PORT}`;
+
+// Config
 const config = {
-  entry: path.join(__dirname, '/app/index'),
+  entry: {
+    app: ENTRY
+  },
   output: {
-    path: path.join(__dirname, '/public/'),
-    filename: 'assets/js/portfolio.js'
+    path: OUTPUT,
+    filename: 'assets/js/bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, '/public/'),
+    contentBase: OUTPUT,
+    host: HOST,
+    port: PORT,
     historyApiFallback: true
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader', 'eslint-loader']
+      },
+      {
+        test: /\.jsx$/,
         exclude: /node_modules/,
         loaders: ['babel-loader', 'eslint-loader']
       },
@@ -45,7 +64,17 @@ const config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('assets/css/styles.css')
+    new ExtractTextPlugin('assets/css/styles.css'),
+    new BrowserSyncPlugin(
+      {
+        host: HOST,
+        port: PORT,
+        proxy: PROXY
+      },
+      {
+        reload: false
+      }
+    )
   ],
   watch: false
 };
