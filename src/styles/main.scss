@@ -22,6 +22,14 @@ a:focus {
   text-decoration: none;
 }
 
+a {
+  color: #007ACC;
+  &:hover,
+  &.current {
+    color: #288FD3;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }

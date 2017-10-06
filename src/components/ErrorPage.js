@@ -17,8 +17,8 @@ function ErrorPage() {
       </p>
       <p className="margin-top">
         If you&apos;d like to know more about me, you can go here:
-        <NavLink activeClassName="current" exact to="/about"> SYSTEM_ABOUT_ME</NavLink> ||
-        <NavLink activeClassName="current" exact to="/"> SYSTEM_GO_TO_HOME_PAGE</NavLink>
+        <NavLink activeClassName="current" exact to="/about" title="View about."> SYSTEM_ABOUT_ME</NavLink> ||
+        <NavLink activeClassName="current" exact to="/" title="View home."> SYSTEM_GO_TO_HOME_PAGE</NavLink>
       </p>
     </section>
   );
