@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Import styles
+import './ProjectProjects.scss';
+
 /**
  * Returns view code link if there is a URL.
  * @param {string} url - Url of the link.
@@ -35,7 +38,16 @@ function ProjectProjects({ projects }) {
               __html: project.description
             }}
             />
-            <p><span className="variable">Technologies_Used</span> = [<span className="string">{project.technologiesUsed.sort().join(', ')}</span>];</p>
+            <p>
+              <span className="variable">Technologies_Used</span> = [
+              <span className="string">
+                {
+                  project.technologiesUsed.sort().map((technology, index1) => (
+                    <span className="array-item" key={index1}>{`'${technology}'`}</span>
+                  ))
+                }
+              </span>];
+            </p>
             {viewCode(project.codeURL, project.name)}
           </article>
         ))

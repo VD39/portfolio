@@ -17,7 +17,7 @@ function Projects({ projects }) {
           {
             projects.map((project, index) => (
               <section className="border-bottom margin-top" key={index}>
-                <h2 className="red">{`_${project.title.replace(' ', '_')}`}</h2>
+                <h2 className="red uppercase">{project.title}</h2>
                 <p className="margin-top css-comment">{project.description}</p>
                 <ProjectProjects projects={project.work} />
                 <br className="br" />

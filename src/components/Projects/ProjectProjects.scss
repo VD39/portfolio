@@ -1,0 +1,10 @@
+.array-item {
+  &:after {
+    content: ', ';
+  }
+  &:last-child {
+    &:after {
+      content: '';
+    }
+  }
+}
