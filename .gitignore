@@ -3,8 +3,14 @@ node_modules
 .tmp
 .sass-cache
 npm-debug.log
+dist
+build
+.idea
+.vscode
 src/config/Firebase.js
 public/assets
 .firebaserc
 firebase.json
+yarn.lock
+yarn-error.log
 

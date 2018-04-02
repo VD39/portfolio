@@ -10,51 +10,62 @@ import './ProjectProjects.scss';
  * @param {string} url - Url of the link.
  * @param {string} title - Title for the link.
  */
-function viewCode(url, title) {
-  return url ? (
+const viewCode = (url, title) =>
+  (url ? (
     <p>
-      <a className="function" href={url} target="_blank" rel="noopener noreferrer" title={`View ${title} code.`}>
+      <a
+        className="function"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`View ${title} code.`}
+      >
         View code
       </a>
     </p>
-  ) : null;
-}
+  ) : null);
 
 /**
  * Project component.
  */
-function ProjectProjects({ projects }) {
-  return (
-    <div className="row">
-      {
-        projects.reverse().map((project, index) => (
-          <article className="col-xs-12 col-md-6 margin-top" key={index}>
-            <h3>
-              <a className="function" href={project.visitSiteUrl} target="_blank" rel="noopener noreferrer" title={`View ${project.name}.`}>
-                {project.name}
-              </a>
-            </h3>
-            <p dangerouslySetInnerHTML={{
-              __html: project.description
-            }}
-            />
-            <p>
-              <span className="variable">Technologies_Used</span> = [
-              <span className="string">
-                {
-                  project.technologiesUsed.sort().map((technology, index1) => (
-                    <span className="array-item" key={index1}>{`'${technology}'`}</span>
-                  ))
-                }
-              </span>];
-            </p>
-            {viewCode(project.codeURL, project.name)}
-          </article>
-        ))
-      }
-    </div>
-  );
-}
+const ProjectProjects = ({ projects }) => (
+  <div className="row">
+    {projects.reverse().map((project, index) => (
+      <article className="col-xs-12 col-md-6 margin-top" key={index}>
+        <h3>
+          <a
+            className="function"
+            href={project.visitSiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`View ${project.name}.`}
+          >
+            {project.name}
+          </a>
+        </h3>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: project.description,
+          }}
+        />
+        <p>
+          <span className="variable">Technologies_Used</span> = [
+          <span className="string">
+            {project.technologiesUsed
+              .sort()
+              .map((technology, index1) => (
+                <span
+                  className="array-item"
+                  key={index1}
+                >{`'${technology}'`}</span>
+              ))}
+          </span>];
+        </p>
+        {viewCode(project.codeURL, project.name)}
+      </article>
+    ))}
+  </div>
+);
 
 // Proptypes
 ProjectProjects.propTypes = {
@@ -63,8 +74,8 @@ ProjectProjects.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     technologiesUsed: PropTypes.array.isRequired,
-    codeURL: PropTypes.string
-  })).isRequired
+    codeURL: PropTypes.string,
+  })).isRequired,
 };
 
 export default ProjectProjects;

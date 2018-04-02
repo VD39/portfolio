@@ -8,23 +8,23 @@ import './WorkExperience.scss';
 /**
  * WorkExperience component.
  */
-function WorkExperience({ experences }) {
-  return (
-    <article className="margin-top">
-      <h2 className="red uppercase">Work_Experience</h2>
-      <div className="ui grid">
-        {
-          experences.map((experence, index) => (
-            <section className="margin-top" key={index}>
-              <h3 className="interface">{experence.jobTitle} @ {experence.company}</h3>
-              <p className="return min-margin">{experence.startDate} – {experence.endDate}</p>
-            </section>
-          ))
-        }
-      </div>
-    </article>
-  );
-}
+const WorkExperience = ({ experences }) => (
+  <article className="margin-top">
+    <h2 className="red uppercase">Work_Experience</h2>
+    <div className="ui grid">
+      {experences.map((experence, index) => (
+        <section className="margin-top" key={index}>
+          <h3 className="interface">
+            {experence.jobTitle} @ {experence.company}
+          </h3>
+          <p className="return min-margin">
+            {experence.startDate} – {experence.endDate}
+          </p>
+        </section>
+      ))}
+    </div>
+  </article>
+);
 
 // Proptypes
 WorkExperience.propTypes = {
@@ -34,8 +34,8 @@ WorkExperience.propTypes = {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    skills: PropTypes.array.isRequired
-  })).isRequired
+    skills: PropTypes.array.isRequired,
+  })).isRequired,
 };
 
 export default WorkExperience;

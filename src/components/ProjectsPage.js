@@ -11,7 +11,7 @@ import Projects from './Projects';
 class ProjectsPage extends Component {
   state = {
     projectsData: [],
-    loading: true
+    loading: true,
   };
 
   /**
@@ -24,17 +24,17 @@ class ProjectsPage extends Component {
       // Set the state
       this.setState({
         projectsData: snap.val(),
-        loading: false
+        loading: false,
       });
     });
-  }
+  };
 
   /**
    * Once the route has changed, disconnect from Firebase.
    */
   componentWillUnmount = () => {
     fbRef.off(); // Disconnect from Firebase
-  }
+  };
 
   /**
    * Render the ProjectPage component.
