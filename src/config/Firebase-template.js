@@ -1,12 +1,12 @@
 // Import dependencies
 import { initializeApp, database } from 'firebase';
 
-// Firebase configuration 
+// Firebase configuration
 const config = {
   apiKey: '<your-api-key>',
   authDomain: '<your-auth-domain>',
   databaseURL: '<your-database-url>',
-  storageBucket: '<your-storage-bucket>'
+  storageBucket: '<your-storage-bucket>',
 };
 
 // Initialise Firebase

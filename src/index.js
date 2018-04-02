@@ -12,7 +12,4 @@ import './styles/style.scss';
 const root = document.getElementById('root');
 
 // Render react app
-ReactDOM.render(
-  <Routes />,
-  root
-);
+ReactDOM.render(<Routes />, root);

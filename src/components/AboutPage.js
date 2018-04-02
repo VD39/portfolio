@@ -12,7 +12,7 @@ class AboutPage extends Component {
   // Intial state
   state = {
     aboutData: [], // About data
-    loading: true // Loading state
+    loading: true, // Loading state
   };
 
   /**
@@ -25,17 +25,17 @@ class AboutPage extends Component {
       // Set the state
       this.setState({
         aboutData: snap.val(),
-        loading: false
+        loading: false,
       });
     });
-  }
+  };
 
   /**
    * Once the route has changed, disconnect from Firebase.
    */
   componentWillUnmount = () => {
     fbRef.off(); // Disconnect from Firebase
-  }
+  };
 
   /**
    * Render the AboutPage component.

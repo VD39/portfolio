@@ -11,17 +11,17 @@ import './Header.scss';
 /**
  * Header component.
  */
-function Header() {
-  return (
-    <header className="navbar header">
-      <div className="container">
-        <div className="navbar-header">
-          <NavLink className="navbar-brand" to="/" title="View home.">{'<Vijay />'}</NavLink>
-        </div>
-        <Navigation />
+const Header = () => (
+  <header className="navbar header">
+    <div className="container">
+      <div className="navbar-header">
+        <NavLink className="navbar-brand" to="/" title="View home.">
+          {'<Vijay />'}
+        </NavLink>
       </div>
-    </header>
-  );
-}
+      <Navigation />
+    </div>
+  </header>
+);
 
 export default Header;

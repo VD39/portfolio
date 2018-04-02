@@ -9,21 +9,17 @@ import Footer from './Footer';
 /**
  * Layout component.
  */
-function Layout({ children }) {
-  return (
-    <div>
-      <Header />
-      <main className="container main">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-}
+const Layout = ({ children }) => (
+  <div>
+    <Header />
+    <main className="container main">{children}</main>
+    <Footer />
+  </div>
+);
 
 // Proptypes
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
