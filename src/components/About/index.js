@@ -33,8 +33,8 @@ const About = ({ about }) => (
       <div className="col-xs-12 margin-top">
         <TechnicalSkills skills={about.technicalSkills} />
       </div>
-      <div className="col-xs-s12 margin-top">
-        <WorkExperience experences={about.workExperence} />
+      <div className="col-xs-12 margin-top">
+        <WorkExperience experiences={about.workExperience} />
       </div>
 
       <div className="col-xs-12 col-md-9 margin-top">
@@ -52,7 +52,7 @@ About.propTypes = {
   about: PropTypes.shape({
     aboutMe: PropTypes.object.isRequired,
     technicalSkills: PropTypes.array.isRequired,
-    workExperence: PropTypes.array.isRequired,
+    workExperience: PropTypes.array.isRequired,
     interests: PropTypes.array.isRequired,
     socialConnect: PropTypes.array.isRequired,
   }).isRequired,

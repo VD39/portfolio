@@ -8,17 +8,17 @@ import './WorkExperience.scss';
 /**
  * WorkExperience component.
  */
-const WorkExperience = ({ experences }) => (
+const WorkExperience = ({ experiences }) => (
   <article className="margin-top">
     <h2 className="red uppercase">Work_Experience</h2>
     <div className="ui grid">
-      {experences.map((experence, index) => (
+      {experiences.map((experience, index) => (
         <section className="margin-top" key={index}>
           <h3 className="interface">
-            {experence.jobTitle} @ {experence.company}
+            {experience.jobTitle} @ {experience.company}
           </h3>
           <p className="return min-margin">
-            {experence.startDate} – {experence.endDate}
+            {experience.startDate} – {experience.endDate}
           </p>
         </section>
       ))}
@@ -28,7 +28,7 @@ const WorkExperience = ({ experences }) => (
 
 // Proptypes
 WorkExperience.propTypes = {
-  experences: PropTypes.arrayOf(PropTypes.shape({
+  experiences: PropTypes.arrayOf(PropTypes.shape({
     jobTitle: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
     startDate: PropTypes.string.isRequired,

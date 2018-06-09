@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Intrests component.
+ * Interests component.
  */
-const Intrests = ({ interests }) => (
+const Interests = ({ interests }) => (
   <article className="margin-top">
     <h2 className="red uppercase">Interests</h2>
     <div className="margin-top">
@@ -22,8 +22,8 @@ const Intrests = ({ interests }) => (
 );
 
 // Proptypes
-Intrests.propTypes = {
+Interests.propTypes = {
   interests: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default Intrests;
+export default Interests;

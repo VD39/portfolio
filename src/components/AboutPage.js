@@ -9,7 +9,7 @@ import Loader from './Loader';
 import About from './About';
 
 class AboutPage extends Component {
-  // Intial state
+  // Initial state
   state = {
     aboutData: [], // About data
     loading: true, // Loading state
