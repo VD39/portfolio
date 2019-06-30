@@ -14,7 +14,7 @@ import Projects from './components/Projects';
  * Routes component.
  */
 const Routes = ({ about, projects }) => (
-  <Router>
+  <Router basename="/portfolio">
     <Layout>
       <Switch>
         <Route exact path="/" component={Home} />

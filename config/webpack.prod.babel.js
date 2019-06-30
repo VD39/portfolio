@@ -28,6 +28,9 @@ const plugins = [
       from: `${OUTPUT}/favicon.ico`,
     },
     {
+      from: `${OUTPUT}/404.html`,
+    },
+    {
       from: `${OUTPUT}/assets/`,
       to: `${DIST}/assets/`,
     },

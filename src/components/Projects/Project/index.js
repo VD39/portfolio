@@ -48,7 +48,7 @@ const Project = ({ className, projects }) =>
         />
         <p className="no-margin-bottom">
           <span className="egg-blue">Technologies_Used</span>
-          <span ariaHidden="true"> = [</span>
+          <span aria-hidden="true"> = [</span>
         </p>
         <ul className="project__list no-margin-bottom">
           {technologies.sort().map(technology => (
@@ -57,7 +57,7 @@ const Project = ({ className, projects }) =>
             </li>
           ))}
         </ul>
-        <p ariaHidden="true">];</p>
+        <p aria-hidden="true">];</p>
         {viewCode(codeURL, name)}
       </li>
     ));
