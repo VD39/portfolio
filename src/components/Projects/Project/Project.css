@@ -1,0 +1,27 @@
+.project {
+  @mixin margin-bottom;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    padding-left: var(--space-50);
+  }
+
+  &__item {
+    &::after {
+      content: "', ";
+    }
+
+    &::before {
+      content: "'";
+    }
+
+    &:last-child {
+      &::after {
+        content: "'";
+      }
+    }
+  }
+}

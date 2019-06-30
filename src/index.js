@@ -1,15 +1,15 @@
-// Import dependencies
+// Import dependencies.
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import components
+// Import components.
 import Routes from './Routes';
 
-// Import CSS
-import './styles/style.scss';
+// Import data.
+import { portfolio } from './data/portfolio';
 
-// Root element
+// Get root element.
 const root = document.getElementById('root');
 
-// Render react app
-ReactDOM.render(<Routes />, root);
+// Render React app.
+ReactDOM.render(<Routes {...portfolio} />, root);

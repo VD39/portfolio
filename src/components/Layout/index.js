@@ -1,8 +1,8 @@
-// Import dependencies
+// Import dependencies.
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import components
+// Import components.
 import Header from './Header';
 import Footer from './Footer';
 
@@ -12,12 +12,12 @@ import Footer from './Footer';
 const Layout = ({ children }) => (
   <div>
     <Header />
-    <main className="container main">{children}</main>
+    <main className="inner main">{children}</main>
     <Footer />
   </div>
 );
 
-// Proptypes
+// PropTypes.
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };

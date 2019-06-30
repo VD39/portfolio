@@ -1,0 +1,5 @@
+.social-connect {
+  &__item {
+    @mixin margin-bottom;
+  }
+}

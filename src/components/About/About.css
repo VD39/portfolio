@@ -1,0 +1,27 @@
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+
+  > * {
+    @mixin margin-bottom;
+  }
+
+  &__title,
+  &__current-status {
+    align-self: center;
+  }
+
+  &__interests {
+    @mixin margin-bottom;
+
+    @media (--tablet-up) {
+      flex-basis: 70%;
+    }
+  }
+
+  &__social-content {
+    @media (--tablet-up) {
+      flex-basis: 23%;
+    }
+  }
+}

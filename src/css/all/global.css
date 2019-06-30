@@ -1,0 +1,91 @@
+html,
+body {
+  color: var(--ghost);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background-color: var(--cod-grey);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding-left: var(--space-50);
+  padding-right: var(--space-50);
+
+  @media (--desktop-up) {
+    padding-left: var(--space-100);
+    padding-right: var(--space-100);
+  }
+}
+
+.root {
+  height: 100%;
+
+  > * {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+  }
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (--tablet-up) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__column {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.dull-lavender {
+  color: var(--dull-lavender);
+}
+
+.egg-blue {
+  color: var(--egg-blue);
+}
+
+.ocean-green {
+  color: var(--ocean-green);
+}
+
+.brass {
+  color: var(--brass);
+}
+
+.red-violet {
+  color: var(--red-violet);
+}
+
+.ronchi {
+  color: var(--ronchi);
+}
+
+.cinnabar {
+  color: var(--cinnabar);
+}
+
+.indigo {
+  color: var(--indigo);
+}

@@ -1,61 +1,63 @@
-// Import dependencies
+// Import dependencies.
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import components
-import Connect from './Connect';
+// Import components.
 import Interests from './Interests';
-import WorkExperience from './WorkExperience';
+import SocialConnect from './SocialConnect';
 import TechnicalSkills from './TechnicalSkills';
+import WorkExperience from './WorkExperience';
 
 /**
  * About component.
  */
-const About = ({ about }) => (
-  <section className="about-wrapper">
-    <h1 className="text-center title">About</h1>
-    <div className="row margin-top">
-      <div className="col-xs-12 margin-top">
-        <article>
-          <p
-            className="text-center js-comment"
-            dangerouslySetInnerHTML={{
-              __html: about.aboutMe.currentStatus,
-            }}
-          />
-          <p
-            dangerouslySetInnerHTML={{
-              __html: about.aboutMe.summary,
-            }}
-          />
-        </article>
-      </div>
-      <div className="col-xs-12 margin-top">
-        <TechnicalSkills skills={about.technicalSkills} />
-      </div>
-      <div className="col-xs-12 margin-top">
-        <WorkExperience experiences={about.workExperience} />
-      </div>
-
-      <div className="col-xs-12 col-md-9 margin-top">
-        <Interests interests={about.interests} />
-      </div>
-      <div className="col-xs-12 col-md-3 margin-top">
-        <Connect connections={about.socialConnect} />
-      </div>
+const About = ({
+  aboutMe,
+  interests,
+  technicalSkills,
+  socialConnect,
+  workExperience,
+}) => (
+  <section className="about">
+    <h1 className="about__title brackets center-text">About</h1>
+    <p
+      className="about__current-status html-comment center-text"
+      dangerouslySetInnerHTML={{
+        __html: aboutMe.currentStatus,
+      }}
+    />
+    <article>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: aboutMe.summary,
+        }}
+      />
+    </article>
+    <TechnicalSkills technicalSkills={technicalSkills} />
+    <WorkExperience workExperience={workExperience} />
+    <div className="two-columns">
+      <Interests
+        className="about__interests two-columns__column"
+        interests={interests}
+      />
+      <SocialConnect
+        className="about__social-content two-columns__column"
+        socialConnect={socialConnect}
+      />
     </div>
   </section>
 );
 
-// Proptypes
+// PropTypes.
 About.propTypes = {
-  about: PropTypes.shape({
-    aboutMe: PropTypes.object.isRequired,
-    technicalSkills: PropTypes.array.isRequired,
-    workExperience: PropTypes.array.isRequired,
-    interests: PropTypes.array.isRequired,
-    socialConnect: PropTypes.array.isRequired,
+  aboutMe: PropTypes.shape({
+    currentStatus: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
   }).isRequired,
+  interests: PropTypes.arrayOf(PropTypes.string).isRequired,
+  socialConnect: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  technicalSkills: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  workExperience: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default About;
