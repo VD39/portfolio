@@ -1,0 +1,10 @@
+.interests {
+  &__item {
+    @mixin margin-bottom;
+
+    &::before {
+      content: '> ';
+      color: var(--indigo);
+    }
+  }
+}

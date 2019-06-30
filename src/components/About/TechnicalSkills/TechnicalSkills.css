@@ -1,0 +1,16 @@
+.technical-skills {
+  &__skill {
+    display: inline-block;
+
+    &::after {
+      content: ', ';
+      margin-right: var(--space-20);
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@define-mixin margin-bottom {
+  margin-bottom: var(--space-25);
+
+  @media (--tablet-up) {
+    margin-bottom: var(--space-50);
+  }
+}
+
+@define-mixin link-padding {
+  padding: var(--space-20) var(--space-50);
+  display: block;
+
+  @media (--tablet-up) {
+    padding-top: var(--space-25);
+    padding-bottom: var(--space-25);
+  }
+}

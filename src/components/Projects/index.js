@@ -1,38 +1,37 @@
-// Import dependencies
+// Import dependencies.
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import components
-import ProjectProjects from './ProjectProjects';
+// Import components.
+import Project from './Project';
 
 /**
  * Projects component.
  */
 const Projects = ({ projects }) => (
-  <section className="about-wrapper">
-    <h1 className="text-center title">Projects</h1>
-    <div className="row margin-top">
-      <div className="col-xs-12">
-        {projects.map((project, index) => (
-          <section className="border-bottom margin-top" key={index}>
-            <h2 className="red uppercase">{project.title}</h2>
-            <p className="margin-top css-comment">{project.description}</p>
-            <ProjectProjects projects={project.work} />
-            <br className="br" />
-          </section>
-        ))}
-      </div>
-    </div>
+  <section className="projects">
+    <h1 className="projects__title brackets center-text">Projects</h1>
+    {projects.map(({ description, project, title }) => (
+      <article className="projects__projects" key={title}>
+        <h2 className="dull-lavender uppercase">{title}</h2>
+        <p className="css-comment">{description}</p>
+        <ul className="two-columns no-margin-bottom">
+          <Project className="two-columns__column" projects={project} />
+        </ul>
+      </article>
+    ))}
   </section>
 );
 
-// Proptypes
+// PropTypes.
 Projects.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.shape({
-    description: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    work: PropTypes.array.isRequired,
-  })).isRequired,
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string.isRequired,
+      project: PropTypes.array.isRequired,
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Projects;

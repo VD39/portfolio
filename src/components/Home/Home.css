@@ -1,0 +1,5 @@
+.home {
+  &__link {
+    padding-bottom: 2px;
+  }
+}

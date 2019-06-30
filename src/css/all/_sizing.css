@@ -1,0 +1,11 @@
+:root {
+  /* Spacing. */
+  --space-20: 12px;
+  --space-25: 15px;
+  --space-50: 30px;
+  --space-100: 60px; /* Base space. */
+  --space-120: 72px;
+
+  /* Max screen size width. */
+  --max-width: 1170px;
+}

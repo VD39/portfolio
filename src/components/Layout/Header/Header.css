@@ -1,0 +1,26 @@
+.header {
+  background-color: var(--outer-space);
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (--tablet-up) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__name {
+    @mixin link-padding;
+
+    @media (--tablet-up) {
+      margin-bottom: 0;
+    }
+
+    &:--link-states {
+      border-bottom-width: 0;
+    }
+  }
+}

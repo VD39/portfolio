@@ -1,0 +1,19 @@
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__title {
+    align-self: center;
+  }
+
+  &__projects {
+    @mixin margin-bottom;
+
+    border-bottom: 2px dashed var(--ghost);
+    padding-bottom: var(--space-20);
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}

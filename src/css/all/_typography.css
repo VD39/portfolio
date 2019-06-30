@@ -1,0 +1,57 @@
+html {
+  /* font-size: 80%; */
+  line-height: var(--line-height);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-s);
+  line-height: var(--line-height);
+  font-weight: initial;
+  font-style: normal;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  @mixin margin-bottom;
+
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: var(--font-xl);
+}
+
+h2 {
+  font-size: var(--font-l);
+}
+
+h3 {
+  font-size: var(--font-m);
+}
+
+a {
+  color: var(--cerulean);
+  text-decoration: none;
+
+  &:--link-states {
+    color: var(--deep-cerulean);
+    text-decoration: none;
+    border-bottom: 1px solid var(--deep-cerulean);
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}

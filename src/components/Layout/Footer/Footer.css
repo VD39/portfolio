@@ -1,0 +1,5 @@
+.footer {
+  padding: var(--space-25) 0;
+  border-top: 2px dashed var(--ghost);
+  margin-top: auto;
+}

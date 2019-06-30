@@ -1,0 +1,63 @@
+.css-comment {
+  color: var(--comment);
+
+  &::after {
+    content: ' */';
+  }
+
+  &::before {
+    content: '/* ';
+  }
+}
+
+.brackets {
+  color: var(--egg-blue);
+
+  &::after {
+    content: ' }';
+  }
+
+  &::before {
+    content: '{ ';
+  }
+}
+
+.html-comment {
+  color: var(--comment);
+
+  &::after {
+    content: ' -->';
+  }
+
+  &::before {
+    content: '<!-- ';
+  }
+}
+
+.html-tag {
+  color: var(--cerulean);
+
+  &::after {
+    content: '/>';
+  }
+
+  &::before {
+    content: '<';
+  }
+}
+
+.function {
+  position: relative;
+
+  &::after {
+    content: '();';
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:--link-states {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
