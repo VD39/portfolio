@@ -3,7 +3,7 @@ export const portfolio = {
   about: {
     aboutMe: {
       currentStatus:
-        'I am currently working at <a href="http://www.amazeelabs.com" title="Visit AmazeeLabs" target="_blank" rel="noopener noreferrer">AmazeeLabs</a> in Zurich.',
+        'I am currently working at <a href="http://www.homegate.ch" title="Visit Homegate" target="_blank" rel="noopener noreferrer">Homegate</a> in Zurich.',
       summary:
         '<p>I am a passionate and proficient web developer with experience producing code to a consistently high standard. I take pride in what I create, and motivated by a lifelong love of learning of new skills. I am a quick learner who can absorb new ideas and can communicate clearly and effectively in any situation.</p><p>Since I have held the position of many Developer/Engineering roles, I have demonstrated an ability to work across each department as both a lead and team player, and to establish strong working relationships with colleagues.</p><p>In addition to HTML5 and CSS3, I code not only with vanilla JavaScript or TypeScript, but I also have experience working with many frameworks and libraries, such as Angular, React, and jQuery. I also have knowledge with many backend technologies such as C#, PHP, and Node.JS.</p><p>To make sure that I follow the developing trends and the cutting edge technologies, I love to attend conferences and meetups.</p>',
     },
